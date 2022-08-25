@@ -545,7 +545,7 @@ def help(client: pyrogram.client.Client, message: pyrogram.types.messages_and_me
 #source
 @app.on_message(filters.command(['source']))
 def source(client: pyrogram.client.Client, message: pyrogram.types.messages_and_media.message.Message):
-    oldm = app.send_message(message.chat.id, "**GITHUB - https://urlsopen.com/AUnx**"**", disable_web_page_preview=True, reply_to_message_id=message.id)
+    oldm = app.send_message(message.chat.id, "**GITHUB - https://urlsopen.com/AUnx**", disable_web_page_preview=True, reply_to_message_id=message.id)
     dm = threading.Thread(target=lambda:dltmsg(oldm),daemon=True)
     dm.start() 
 
